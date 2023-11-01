@@ -21,7 +21,29 @@ public class Main {
         System.out.println("1. Office Worker");
         System.out.println("2. Consultant");
 
-        //Validate input
+        //Call menues
+        OfficeWorkerMenu();
+            ManageCustomerMenu();
+                CreateCustomer();
+                UpdateCustomer();
+                SearchCustomer();
+            ManageProjectMenu();
+                CreateProject();
+                UpdateProject();
+                SearchProject();
+                NotificationSystem();
+                    GetNotification();
+                    SendNotification();
+            ManageConsultantMenu();
+                CreateConsultant();
+                UpdateConsultant();
+                SearchConsultant();
+
+        CosultantMenu();
+            ManageTaskMenu();
+                CreateTask();
+                UpdateTask();
+                SearchTask();
 
 
     }
