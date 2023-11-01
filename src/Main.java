@@ -17,6 +17,12 @@ public class Main {
 
         //Initialize sentinel
         boolean done = false;
+
+        //Initialize red color
+        String redColor = "\u001B[31m";
+        //Reset text color to default
+        String resetColor = "\u001B[0m";
+
         //Menu
         do {
             System.out.println("Welcome to The House of Consultants");
@@ -36,36 +42,11 @@ public class Main {
                     ConsultantMenu();
                     break;
                 default:
-                    System.out.println("Invalid input");
+                    System.out.println(redColor + "Invalid input" + resetColor);
                     break;
             }
 
         }while(!done);
-        //Call menu
-        /*OfficeWorkerMenu();
-            ManageCustomerMenu();
-                CreateCustomer();
-                UpdateCustomer();
-                SearchCustomer();
-            ManageProjectMenu();
-                CreateProject();
-                UpdateProject();
-                SearchProject();
-                NotificationSystem();
-                    GetNotification();
-                    SendNotification();
-            ManageConsultantMenu();
-                CreateConsultant();
-                UpdateConsultant();
-                SearchConsultant();
-
-        ConsultantMenu();
-            ManageTaskMenu();
-                CreateTask();
-                UpdateTask();
-                SearchTask();
-*/
-
     }
 
     private static void SearchTask() {
@@ -81,11 +62,73 @@ public class Main {
     }
 
     private static void ManageTaskMenu() {
+        Scanner in = new Scanner(System.in);
+        //Initialize red color
+        String redColor = "\u001B[31m";
+        //Reset text color to default
+        String resetColor = "\u001B[0m";
+        //Initialize sentinel
+        boolean done = false;
+        do {
+            System.out.println("Consultant Menu:");
+            System.out.println("0. For exit");
+            System.out.println("1. Create Task");
+            System.out.println("2. Search Task");
+            System.out.println("3. Update Task");
 
+            String stringInput = in.next();
+            switch (stringInput) {
+                case "0":
+                    done = true;
+                    break;
+                case "1":
+                    CreateTask();
+                    break;
+                case "2":
+                    SearchTask();
+                    break;
+                case "3":
+                    UpdateTask();
+                    break;
+                default:
+                    System.out.println(redColor + "Invalid input" + resetColor);
+                    break;
+            }
+
+        }while(!done);
     }
 
     private static void ConsultantMenu() {
+        Scanner in = new Scanner(System.in);
+        //Initialize red color
+        String redColor = "\u001B[31m";
+        //Reset text color to default
+        String resetColor = "\u001B[0m";
+        //Initialize sentinel
+        boolean done = false;
+        do {
+            System.out.println("Consultant Menu:");
+            System.out.println("0. For exit");
+            System.out.println("1. Manage Task");
+            System.out.println("2. Notifications");
 
+            String stringInput = in.next();
+            switch (stringInput) {
+                case "0":
+                    done = true;
+                    break;
+                case "1":
+                    ManageTaskMenu();
+                    break;
+                case "2":
+                    NotificationSystem();
+                    break;
+                default:
+                    System.out.println(redColor + "Invalid input" + resetColor);
+                    break;
+            }
+
+        }while(!done);
     }
 
     private static void SearchConsultant() {
@@ -101,7 +144,40 @@ public class Main {
     }
 
     private static void ManageConsultantMenu() {
+        Scanner in = new Scanner(System.in);
+        //Initialize red color
+        String redColor = "\u001B[31m";
+        //Reset text color to default
+        String resetColor = "\u001B[0m";
+        //Initialize sentinel
+        boolean done = false;
+        do {
+            System.out.println("Consultant Menu:");
+            System.out.println("0. For exit");
+            System.out.println("1. Create Consultant");
+            System.out.println("2. Search Consultant");
+            System.out.println("3. Update Consultant");
 
+            String stringInput = in.next();
+            switch (stringInput) {
+                case "0":
+                    done = true;
+                    break;
+                case "1":
+                    CreateConsultant();
+                    break;
+                case "2":
+                    SearchConsultant();
+                    break;
+                case "3":
+                    UpdateConsultant();
+                    break;
+                default:
+                    System.out.println(redColor + "Invalid input" + resetColor);
+                    break;
+            }
+
+        }while(!done);
     }
 
     private static void SendNotification() {
@@ -129,7 +205,40 @@ public class Main {
     }
 
     private static void ManageProjectMenu() {
+        Scanner in = new Scanner(System.in);
+        //Initialize red color
+        String redColor = "\u001B[31m";
+        //Reset text color to default
+        String resetColor = "\u001B[0m";
+        //Initialize sentinel
+        boolean done = false;
+        do {
+            System.out.println("Consultant Menu:");
+            System.out.println("0. For exit");
+            System.out.println("1. Create Project");
+            System.out.println("2. Search Project");
+            System.out.println("3. Update Project");
 
+            String stringInput = in.next();
+            switch (stringInput) {
+                case "0":
+                    done = true;
+                    break;
+                case "1":
+                    CreateProject();
+                    break;
+                case "2":
+                    SearchProject();
+                    break;
+                case "3":
+                    UpdateProject();
+                    break;
+                default:
+                    System.out.println(redColor + "Invalid input" + resetColor);
+                    break;
+            }
+
+        }while(!done);
     }
 
     private static void SearchCustomer() {
@@ -144,11 +253,76 @@ public class Main {
     }
 
     private static void ManageCustomerMenu() {
+        Scanner in = new Scanner(System.in);
+        //Initialize red color
+        String redColor = "\u001B[31m";
+        //Reset text color to default
+        String resetColor = "\u001B[0m";
+        //Initialize sentinel
+        boolean done = false;
+        do {
+            System.out.println("Consultant Menu:");
+            System.out.println("0. For exit");
+            System.out.println("1. Create Customer");
+            System.out.println("2. Search Customer");
+            System.out.println("3. Update Customer");
 
+            String stringInput = in.next();
+            switch (stringInput) {
+                case "0":
+                    done = true;
+                    break;
+                case "1":
+                    CreateCustomer();
+                    break;
+                case "2":
+                    SearchCustomer();
+                    break;
+                case "3":
+                    UpdateCustomer();
+                    break;
+                default:
+                    System.out.println(redColor + "Invalid input" + resetColor);
+                    break;
+            }
+
+        }while(!done);
     }
 
     private static void OfficeWorkerMenu() {
+        Scanner in = new Scanner(System.in);
+        //Initialize red color
+        String redColor = "\u001B[31m";
+        //Reset text color to default
+        String resetColor = "\u001B[0m";
+        //Initialize Sentinel
+        boolean done = false;
+        do {
+            System.out.println("Office Worker Menu:");
+            System.out.println("0. For exit");
+            System.out.println("1. Manage Customer");
+            System.out.println("2. Manage Project");
+            System.out.println("3. Manage Consultant");
 
+            String stringInput = in.next();
+            switch (stringInput) {
+                case "0":
+                    done = true;
+                    break;
+                case "1":
+                    ManageCustomerMenu();
+                    break;
+                case "2":
+                    ManageProjectMenu();
+                    break;
+                case "3":
+                    ManageConsultantMenu();
+                default:
+                    System.out.println(redColor + "Invalid input" + resetColor);
+                    break;
+            }
+
+        }while(!done);
     }
 
 }
